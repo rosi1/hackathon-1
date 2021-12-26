@@ -54,43 +54,15 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 12rem);
+  grid-template-columns: repeat(4, 9rem);
   gap: 15px;
-  grid-template-rows: repeat(2, 12rem);
+  grid-template-rows: repeat(4, 9rem);
   perspective: 800px;
 }
 .card {
   position: relative;
   transform-style: preserve-3d;
   transition: all 1s ease;
-  /* background: #dad299;
-  background: -webkit-linear-gradient(
-    to right,
-    #b0dab9,
-    #dad299
-  );
-  background: linear-gradient(
-    to right,
-    #556358,
-    #fefeff,
-    #fefeff,
-   #58685c
-  ); */
-  /* background: #59c173; 
-  background: -webkit-linear-gradient(
-    to bottom,
-    #7e55cc,
-    #a17fe0,
-    #59c173
-  ); 
-  background: linear-gradient(
-    to bottom,
-    #db8ad0,
-    #fefeff,
-    #fefeff,
-    #fefeff,
-    #8bca9b
-  );  */
 }
 
 .cardFace,

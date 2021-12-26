@@ -9,8 +9,8 @@ function starting() {
     setTimeout(() =>p.style.display = 'none',3000);
 }
     let correctCards = [];
-    let moves = 10;
-    let timeRemaining = 30;
+    let moves = 15;
+    let timeRemaining = 40;
     let firstClick = false;
     
     const clownsArr = () => [
@@ -31,6 +31,22 @@ function starting() {
             img: './img/clown4.jpg'
         },
         {
+            name: 'clown5',
+            img: '../img/clown5.jpg'
+        },
+        {
+            name: 'clown6',
+            img: './img/clown6.jpg'
+        },
+        {
+            name: 'clown7',
+            img: './img/clown7.jpg'
+        },
+        {
+            name: 'clown8',
+            img: './img/clown8.jpg'
+        },
+        {
             name: 'clown1',
             img: '../img/clown.png'
         },
@@ -45,6 +61,22 @@ function starting() {
         {
             name: 'clown4',
             img: './img/clown4.jpg'
+        },
+        {
+            name: 'clown5',
+            img: '../img/clown5.jpg'
+        },
+        {
+            name: 'clown6',
+            img: './img/clown6.jpg'
+        },
+        {
+            name: 'clown7',
+            img: './img/clown7.jpg'
+        },
+        {
+            name: 'clown8',
+            img: './img/clown8.jpg'
         }
     ];
     
@@ -125,7 +157,7 @@ function starting() {
         const allDataCard = clownsArr();
         let clickedCard = e.target;
         clickedCard.classList.add('flipped');
-        // console.log(clickedCard);
+        console.log(clickedCard);
         let cardFlipped = document.querySelectorAll('.flipped');
         // console.log(cardFlipped);
         if(cardFlipped.length === 2){
@@ -148,7 +180,7 @@ function starting() {
                         ,4000)
                     }
                     else if(correctCards.length < allDataCard.length){
-                        claps.innerHTML =`<img src="./img/clapsbutsmaller.gif"/>`
+                        claps.innerHTML =`<img src="./img/claps.gif"/>`
                         claps.style.display = 'block';
                         setTimeout(() =>claps.style.display = 'none',2000);
                     }
@@ -163,18 +195,20 @@ function starting() {
             moves--;
             //console.log(moves);
             setTimeout(() => spanMoves.textContent = `Moves: ${moves}`,1000);
-        } 
+        }
+        
     }
     
     function stopCountdown(){
         clearInterval(timeAction);
     }
+
     const restart = () => {
         firstClick = false;
         correctCards = [];
-        timeRemaining = 30;
+        timeRemaining = 40;
         spanTime.textContent = `Time: ${timeRemaining}`;
-        moves = 10;
+        moves = 15;
         spanMoves.textContent = `Moves: ${moves}`
         let allDataCard = shuffleCards();
         let card = document.querySelectorAll('.card');
